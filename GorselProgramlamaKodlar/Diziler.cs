@@ -17,13 +17,7 @@ namespace Diziler
 
    Console.WriteLine("****************");
 
-   Array.Resize(ref dizi, 7);
-   Console.WriteLine(dizi.Length);
-
-   Console.WriteLine("****************");
-
-   dizi = new int[9];
-   
+   Array.Resize(ref dizi, 7); //Yukarıda oluşturulan 5 elemanlı diziye 2 eleman daha eklenmiş olur.
    Console.WriteLine(dizi.Length);
 
    foreach (var eleman in dizi)
@@ -39,6 +33,19 @@ namespace Diziler
 
    Console.WriteLine("Toplam = " + toplam.ToString());
    Console.WriteLine("Toplam = {0}", toplam.ToString());
+   
+   Console.WriteLine("****************");
+
+   dizi = new int[9]; //"dizi" isminde yeni bir dizi oluşturur. 
+   //Dolayısıyla yukarıda oluşturulan 5 elemanlı dizinin elemanları silinmiş olur.
+   Console.WriteLine(dizi.Length);
+   Console.WriteLine("Yeni dizinin elemanları:");
+    foreach (var eleman in dizi)
+   {
+    Console.WriteLine(eleman);
+   }
+   
+   Console.ReadKey();
   }
  }
 }
